@@ -11,10 +11,11 @@
     },
     "background": {
         "scripts": ["hbar.js"],
-        "persistent": false
+        "persistent": true
     },
     "permissions": [
         "webNavigation",
-        "https://hn.algolia.com/api/*"
+        "storage",
+        "http://hn.algolia.com/api/*"
     ]
 }
