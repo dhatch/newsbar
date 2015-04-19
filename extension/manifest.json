@@ -16,5 +16,8 @@
         "webNavigation",
         "storage",
         "http://hn.algolia.com/api/*"
-    ]
+    ],
+    "icon" {
+        "128": "images/icon.png"
+    }
 }
