@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "HBar",
+    "name": "newsbar",
     "description": "Quickly jump to the HackerNews comments for an article.",
-    "version": "0.1",
+    "version": "1.0",
     "page_action": {
         "default_icon": {
             "38": "images/hn.png"
@@ -10,8 +10,7 @@
         "default_title": "View on HN"
     },
     "background": {
-        "scripts": ["hbar.js"],
-        "persistent": true
+        "scripts": ["hbar.js"]
     },
     "permissions": [
         "webNavigation",

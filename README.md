@@ -1,4 +1,4 @@
-HBar
+newsbar
 ====
 
 *A chrome extension.*
