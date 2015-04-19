@@ -15,6 +15,17 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.code {
+    font-family: Consolas, monospace;
+}
+
+.nice-img {
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -56,16 +67,16 @@ a {
 .page-header {
   color: #fff;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  background-color: #FF7E00;
+  background-image: linear-gradient(120deg, #FF3A00, #E2A217) }
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    padding: 2rem 6rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
-    padding: 3rem 4rem; } }
+    padding: 2rem 4rem; } }
 
 @media screen and (max-width: 42em) {
   .page-header {
@@ -112,7 +123,7 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957; }
+  color: rgb(252, 65, 1); }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
