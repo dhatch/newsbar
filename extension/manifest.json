@@ -17,7 +17,7 @@
         "storage",
         "http://hn.algolia.com/api/*"
     ],
-    "icon" {
+    "icon" : {
         "128": "images/icon.png"
     }
 }
