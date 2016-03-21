@@ -4,7 +4,7 @@
  */
 var findItemForPage = function (url, callback) {
     var request = new XMLHttpRequest(),
-         params = 'query="' + encodeURIComponent(url) + '"&' +
+         params = 'query=' + encodeURIComponent(url) + '&' +
             'restrictSearchableAttributes=url&' +
             'typoTolerance=false';
     request.open('GET',
