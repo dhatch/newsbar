@@ -35,11 +35,22 @@ var hbarForPage = function (url, tabId) {
     findItemForPage(url, function (exists, hnId, hnPoints) {
         var tabStr = Number(tabId).toString();
         if (exists) {
-            setPageActionIcon(tabId, Number(hnPoints).toString());
-            chrome.pageAction.show(tabId);
-            var data = {};
-            data[tabStr] = 'https://news.ycombinator.com/item?id='+hnId;
-            chrome.storage.local.set(data);
+            chrome.tabs.get(tabId, function (tab) {
+                if (chrome.runtime.lastError) {
+                    return;
+                }
+
+                setPageActionIcon(tabId, Number(hnPoints).toString());
+                chrome.pageAction.show(tabId);
+                var data = {};
+                data[tabStr] = 'https://news.ycombinator.com/item?id='+hnId;
+                chrome.storage.local.set(data);
+
+                chrome.tabs.onRemoved.addListener(function (tabId) {
+                    var tabString = Number(tabId).toString();
+                    chrome.storage.local.remove(tabString);
+                });
+            });
         }
     });
 };
@@ -103,6 +114,5 @@ chrome.pageAction.onClicked.addListener(function (tab) {
                 'openerTabId': tab.id
             });
         }
-        chrome.storage.local.remove(tabString);
     });
 });
